@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Management</title>
+
+  <!-- All CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/management-style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="images/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="#">Job Application Tracker</a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <a href="dashboard.html" class="btn btn-light me-2">Dashboard</a>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Job Application Management</h2>
+
+    <!-- Add New Application Form -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Add New Job Application</h5>
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="companyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="companyName" placeholder="e.g., Google" required>
+            </div>
+            <div class="col-md-6">
+              <label for="jobTitle" class="form-label">Job Title</label>
+              <input type="text" class="form-control" id="jobTitle" placeholder="e.g., Software Engineer" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="applicationDate" class="form-label">Application Date</label>
+              <input type="date" class="form-control" id="applicationDate" required>
+            </div>
+            <div class="col-md-6">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-control" id="status" required>
+                <option value="">Select Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interviewing">Interviewing</option>
+                <option value="Offer Received">Offer Received</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="notes" class="form-label">Notes</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="Add any notes or details about the application"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Add Application</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- List of Job Applications -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Your Job Applications</h5>
+        <table class="table table-bordered table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>Company Name</th>
+              <th>Job Title</th>
+              <th>Application Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row (you will dynamically generate these rows in your backend) -->
+            <tr>
+              <td>Google</td>
+              <td>Software Engineer</td>
+              <td>2024-10-10</td>
+              <td>Interviewing</td>
+              <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

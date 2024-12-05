@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Status & Progress Tracking</title>
+
+  <!-- All CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/status-style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="images/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="#">Job Application Tracker</a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <a href="dashboard.html" class="btn btn-light me-2">Dashboard</a>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Application Status & Progress Tracking</h2>
+
+    <!-- Application Status Form -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Update Application Status</h5>
+        <form action="update_status.php" method="post">
+          <div class="mb-3">
+            <label for="applicationId" class="form-label">Application ID</label>
+            <input type="text" class="form-control" id="applicationId" name="applicationId" required>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Current Status</label>
+            <select class="form-control" id="status" name="status" required>
+              <option value="">Select Status</option>
+              <option value="Applied">Applied</option>
+              <option value="Interview Scheduled">Interview Scheduled</option>
+              <option value="Interview Completed">Interview Completed</option>
+              <option value="Offer Received">Offer Received</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Update Status</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Visual Progress Tracking -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Application Progress</h5>
+        <div class="progress-container">
+          <ul class="progressbar">
+            <li class="active">Applied</li>
+            <li>Interview Scheduled</li>
+            <li>Interview Completed</li>
+            <li>Offer Received</li>
+            <li>Rejected</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

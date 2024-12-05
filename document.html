@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Upload & Management</title>
+
+  <!-- All CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/document-style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Job Application Tracker</a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <a href="dashboard.html" class="btn btn-light me-2">Dashboard</a>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Document Upload & Management</h2>
+
+    <!-- Document Upload Form -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Upload Documents</h5>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="documentType" class="form-label">Document Type</label>
+            <select class="form-control" id="documentType" name="documentType" required>
+              <option value="">Select Document Type</option>
+              <option value="Resume">Resume</option>
+              <option value="Cover Letter">Cover Letter</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="documentFile" class="form-label">Choose File</label>
+            <input type="file" class="form-control" id="documentFile" name="documentFile" required>
+          </div>
+          <button type="submit" class="btn btn-success">Upload</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- List of Uploaded Documents -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Uploaded Documents</h5>
+        <table class="table table-bordered table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>Document Type</th>
+              <th>File Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row (you will dynamically generate these rows in your backend) -->
+            <tr>
+              <td>Resume</td>
+              <td>resume.pdf</td>
+              <td>
+                <a href="uploads/resume.pdf" class="btn btn-primary btn-sm" download>Download</a>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* status-style.css */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #343a40;
+  }
+  
+  .card {
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  .progress-container {
+    margin-top: 20px;
+  }
+  
+  .progressbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    counter-reset: step;
+  }
+  
+  .progressbar li {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    color: #bbb;
+    font-weight: bold;
+    counter-increment: step;
+  }
+  
+  .progressbar li::before {
+    content: counter(step);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid #bbb;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .progressbar li.active::before {
+    border-color: #007bff;
+  }
+  
+  .progressbar li.active {
+    color: #007bff;
+  }
+  
+  .progressbar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #bbb;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+  }
+  
+  .progressbar li:first-child::after {
+    content: none;
+  }
+  
+  .progressbar li.active::after {
+    background-color: #007bff;
+  }
+  

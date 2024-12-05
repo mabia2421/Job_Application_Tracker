@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Applications - Search & Filter</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Job Applications</h2>
+
+    <!-- Search & Filter Form -->
+    <div class="d-flex justify-content-between mb-4">
+      <input type="text" id="searchInput" class="form-control me-2" placeholder="Search by job title, company, or status">
+      <select id="filterStatus" class="form-select">
+        <option value="">All Statuses</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview Scheduled">Interview Scheduled</option>
+        <option value="Offer Received">Offer Received</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+    </div>
+
+    <!-- Job Applications Table -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>Status</th>
+          <th>Date Applied</th>
+        </tr>
+      </thead>
+      <tbody id="applicationsTable">
+        <!-- Dynamic content will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/search-filter.js"></script>
+</body>
+</html>

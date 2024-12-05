@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard-style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Job Search Analytics</h2>
+    
+
+    <!-- Analytics Cards -->
+    <div class="row text-center mb-4">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Total Applications</h4>
+          <p id="totalApplications" class="display-4">0</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Interviews Scheduled</h4>
+          <p id="interviewsScheduled" class="display-4">0</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h4>Offers Received</h4>
+          <p id="offersReceived" class="display-4">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Chart -->
+    <div class="card p-3">
+      <h5>Application Status Progress</h5>
+      <div id="progressChart"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/analytics-dashboard.js"></script>
+</body>
+</html>
